@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import 'all_widgets/animated_container.dart';
-import 'all_widgets/expanded_widget.dart';
-import 'all_widgets/floating_button_widget.dart';
-import 'all_widgets/opacity_widget.dart';
-import 'all_widgets/page_view_widget.dart';
-import 'all_widgets/wrap_widget.dart';
+import 'all_widgets/animation_container/animated_container.dart';
+import 'all_widgets/expanded/expanded_widget.dart';
+import 'all_widgets/floating_button/floating_button_widget.dart';
+import 'all_widgets/opacity/opacity_widget.dart';
+import 'all_widgets/page_viewer/page_view_widget.dart';
+import 'all_widgets/table/table_widget.dart';
+import 'all_widgets/wrap/wrap_widget.dart';
 
 class AllWidgetsPage extends StatelessWidget {
   const AllWidgetsPage({Key? key}) : super(key: key);
@@ -91,7 +92,6 @@ class AllWidgetsPage extends StatelessWidget {
                 ),
               ),
             ),
-
             SingleChildScrollView(
               scrollDirection: Axis.horizontal,
               child: Padding(
@@ -162,25 +162,29 @@ class AllWidgetsPage extends StatelessWidget {
                 ),
               ),
             ),
+
             SingleChildScrollView(
               scrollDirection: Axis.horizontal,
               child: Padding(
                 padding: EdgeInsets.only(left: 20.0,right: 10,top: 6,bottom: 6),
                 child: Row(
                   children: [
-                    Container(
-                      width: 100,
-                      height: 100,
-                      decoration: BoxDecoration(
-                          color: Colors.blue.shade600,
-                          borderRadius: BorderRadius.circular(20)),
-                      child: Center(
-                          child: Text(
-                            'Wrap Widget',
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 16),
-                          )),
+                    InkWell(
+                      onTap: ()=>Get.to(TableWidget()),
+                      child: Container(
+                        width: 100,
+                        height: 100,
+                        decoration: BoxDecoration(
+                            color: Colors.blue.shade600,
+                            borderRadius: BorderRadius.circular(20)),
+                        child: Center(
+                            child: Text(
+                              'Table Widget',
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 16),
+                            )),
+                      ),
                     ),
                     SizedBox(
                       width: 10,

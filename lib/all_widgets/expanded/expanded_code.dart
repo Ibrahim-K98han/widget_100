@@ -1,30 +1,22 @@
 import 'package:flutter/material.dart';
 
-class ExpandedWidget extends StatelessWidget {
-  const ExpandedWidget({Key? key}) : super(key: key);
+class ExpandedCode extends StatelessWidget {
+  const ExpandedCode({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Expanded Widget'),
+        title: Text('Wrap Code'),
       ),
-      body: Center(
-        child: Column(
-          children: [
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Text(
-                'Display তে যেটুকু স্পেস পাবে তা expanded widget নিয়ে নিবে।',
-                textAlign: TextAlign.justify,
-                maxLines: 2,
-                style: TextStyle(fontSize: 20),
-              ),
-            ),
-            SizedBox(
-              height: 20,
-            ),
-           Row(
+      body: SingleChildScrollView(
+        scrollDirection: Axis.vertical,
+        child: Center(
+          child: Padding(
+            padding: EdgeInsets.all(16.0),
+            child: Column(
+              children: [
+                Text(''' Row(
              children: [
                Expanded(
                  flex: 2,
@@ -47,10 +39,15 @@ class ExpandedWidget extends StatelessWidget {
                    padding: EdgeInsets.all(30),
                    child: Text('3'),
                  ),
-               )
+               ),
+               SizedBox(
+                 height: 100,
+               ),
              ],
-           )
-          ],
+           ),''',style: TextStyle(fontSize: 15),),
+              ],
+            ),
+          ),
         ),
       ),
     );

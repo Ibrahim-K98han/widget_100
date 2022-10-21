@@ -1,9 +1,22 @@
-import 'dart:math';
-
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class AnimatedContainerr extends StatefulWidget {
+class AnimationCode extends StatelessWidget {
+  const AnimationCode({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Animation Code'),
+      ),
+      body: SingleChildScrollView(
+        scrollDirection: Axis.vertical,
+        child: Center(
+          child: Padding(
+            padding: EdgeInsets.all(16.0),
+            child: Column(
+              children: [
+                Text('''class AnimatedContainerr extends StatefulWidget {
   @override
   State<AnimatedContainerr> createState() => _AnimatedContainerrState();
 }
@@ -29,6 +42,9 @@ class _AnimatedContainerrState extends State<AnimatedContainerr> {
             style: TextStyle(fontSize: 20),
           ),
           SizedBox(height: 20,),
+          ElevatedButton(
+              onPressed: () => Get.to(AnimationCode()), child: Text('See Code')),
+          SizedBox(height: 20,),
           Center(
             child: AnimatedContainer(
               width: _width,
@@ -43,6 +59,7 @@ class _AnimatedContainerrState extends State<AnimatedContainerr> {
           ),
         ],
       ),
+
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.play_arrow),
         backgroundColor: Colors.green,
@@ -62,6 +79,14 @@ class _AnimatedContainerrState extends State<AnimatedContainerr> {
                 BorderRadius.circular(random.nextInt(100).toDouble());
           });
         },
+      ),
+    );
+  }
+}''',style: TextStyle(fontSize: 15),),
+              ],
+            ),
+          ),
+        ),
       ),
     );
   }

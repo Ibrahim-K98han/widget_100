@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:widget_100/all_widgets/wrap/wrap_code.dart';
 
 class WrapWidget extends StatelessWidget {
   const WrapWidget({Key? key}) : super(key: key);
@@ -6,6 +9,7 @@ class WrapWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
         title: Text('Wrap Widget'),
       ),
@@ -15,7 +19,7 @@ class WrapWidget extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Text(
-                'Over Flow সমস্যা দূর করার জন্য wrap widget ব্যবহার করা হয়',
+                'OverFlow সমস্যা দূর করার জন্য wrap widget ব্যবহার করা হয়',
                 textAlign: TextAlign.justify,
                 maxLines: 2,
                 style: TextStyle(fontSize: 20),
@@ -72,7 +76,12 @@ class WrapWidget extends StatelessWidget {
                       textScaleFactor: 2.5,
                     ))),
               ],
-            )
+            ),
+            SizedBox(
+              height: 100,
+            ),
+            ElevatedButton(
+                onPressed: () => Get.to(WrapCode()), child: Text('See Code'))
           ],
         ),
       ),

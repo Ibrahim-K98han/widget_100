@@ -1,4 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
+
+import '../animation_container/animation_code.dart';
+import 'floating_code.dart';
 
 class FloatingActionWidget extends StatelessWidget {
   const FloatingActionWidget({Key? key}) : super(key: key);
@@ -17,12 +22,13 @@ class FloatingActionWidget extends StatelessWidget {
             ),
             SizedBox(height: 200,),
             FloatingActionButton(
-              onPressed: () {
-                // Add your onPressed code here!
-              },
+              onPressed: () {},
               backgroundColor: Colors.green,
               child: const Icon(Icons.navigation),
             ),
+            SizedBox(height: 50,),
+            ElevatedButton(
+                onPressed: () => Get.to(FloatingCode()), child: Text('See Code')),
           ],
         ),
       ),
