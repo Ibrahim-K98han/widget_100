@@ -2,12 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import 'all_widgets/animation_container/animated_container.dart';
+import 'all_widgets/back_drop_filter/back_drop_filter_widget.dart';
 import 'all_widgets/clip_r_ract/cliprract_widget.dart';
 import 'all_widgets/expanded/expanded_widget.dart';
 import 'all_widgets/floating_button/floating_button_widget.dart';
 import 'all_widgets/opacity/opacity_widget.dart';
 import 'all_widgets/page_viewer/page_view_widget.dart';
 import 'all_widgets/table/table_widget.dart';
+import 'all_widgets/tool_tip/tool_tip_widget.dart';
 import 'all_widgets/wrap/wrap_widget.dart';
 
 class AllWidgetsPage extends StatelessWidget {
@@ -71,17 +73,21 @@ class AllWidgetsPage extends StatelessWidget {
             itemBuilder: (context, index) => InkWell(
               onTap: (){
                 if(widgetName[index] == 'Wrap'){
-                  Get.to(WrapWidget());
+                  Get.to(const WrapWidget());
                 } if(widgetName[index] == 'Expanded'){
-                  Get.to(ExpandedWidget());
+                  Get.to(const ExpandedWidget());
                 }if(widgetName[index] == 'Opacity'){
-                  Get.to(OpacityWidget());
+                  Get.to(const OpacityWidget());
                 }if(widgetName[index] == 'PageView'){
-                  Get.to(PageViewWidget());
+                  Get.to(const PageViewWidget());
                 }if(widgetName[index] == 'Table'){
-                  Get.to(TableWidget());
+                  Get.to(const TableWidget());
                 }if(widgetName[index] == 'ClipRRect'){
-                  Get.to(ClipRRactWidget());
+                  Get.to(const ClipRRactWidget());
+                }if(widgetName[index] == 'Tooltip'){
+                  Get.to(const ToolTipWidget());
+                }if(widgetName[index] == 'BackDropFilter'){
+                  Get.to(const BackDropFilterWidget());
                 }
 
               },
