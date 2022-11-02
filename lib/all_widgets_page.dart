@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:widget_100/all_widgets/flexible/flexible_widget.dart';
 
 import 'all_widgets/animation_container/animated_container.dart';
 import 'all_widgets/back_drop_filter/back_drop_filter_widget.dart';
@@ -88,6 +89,8 @@ class AllWidgetsPage extends StatelessWidget {
                   Get.to(const ToolTipWidget());
                 }if(widgetName[index] == 'BackDropFilter'){
                   Get.to(const BackDropFilterWidget());
+                }if(widgetName[index] == 'Flexible'){
+                  Get.to(const FlexibleWidget());
                 }
 
               },
