@@ -7,6 +7,7 @@ import 'all_widgets/back_drop_filter/back_drop_filter_widget.dart';
 import 'all_widgets/clip_r_ract/cliprract_widget.dart';
 import 'all_widgets/expanded/expanded_widget.dart';
 import 'all_widgets/floating_button/floating_button_widget.dart';
+import 'all_widgets/list_tile/litst_tile_widget.dart';
 import 'all_widgets/opacity/opacity_widget.dart';
 import 'all_widgets/page_viewer/page_view_widget.dart';
 import 'all_widgets/table/table_widget.dart';
@@ -24,7 +25,6 @@ class AllWidgetsPage extends StatelessWidget {
     'Tooltip',
     'BackDropFilter',
     'Flexible',
-    'LimitedBox',
     'ListTile',
     'Slider',
     'Cupertino Slider',
@@ -72,27 +72,37 @@ class AllWidgetsPage extends StatelessWidget {
                 crossAxisCount: 2, mainAxisSpacing: 5, crossAxisSpacing: 5),
             itemCount: widgetName.length,
             itemBuilder: (context, index) => InkWell(
-              onTap: (){
-                if(widgetName[index] == 'Wrap'){
+              onTap: () {
+                if (widgetName[index] == 'Wrap') {
                   Get.to(const WrapWidget());
-                } if(widgetName[index] == 'Expanded'){
+                }
+                if (widgetName[index] == 'Expanded') {
                   Get.to(const ExpandedWidget());
-                }if(widgetName[index] == 'Opacity'){
+                }
+                if (widgetName[index] == 'Opacity') {
                   Get.to(const OpacityWidget());
-                }if(widgetName[index] == 'PageView'){
+                }
+                if (widgetName[index] == 'PageView') {
                   Get.to(const PageViewWidget());
-                }if(widgetName[index] == 'Table'){
+                }
+                if (widgetName[index] == 'Table') {
                   Get.to(const TableWidget());
-                }if(widgetName[index] == 'ClipRRect'){
+                }
+                if (widgetName[index] == 'ClipRRect') {
                   Get.to(const ClipRRactWidget());
-                }if(widgetName[index] == 'Tooltip'){
+                }
+                if (widgetName[index] == 'Tooltip') {
                   Get.to(const ToolTipWidget());
-                }if(widgetName[index] == 'BackDropFilter'){
+                }
+                if (widgetName[index] == 'BackDropFilter') {
                   Get.to(const BackDropFilterWidget());
-                }if(widgetName[index] == 'Flexible'){
+                }
+                if (widgetName[index] == 'Flexible') {
                   Get.to(const FlexibleWidget());
                 }
-
+                if (widgetName[index] == 'ListTile') {
+                  Get.to(const ListTileWidget());
+                }
               },
               child: Card(
                 color: Colors.blue.shade300,
@@ -111,5 +121,4 @@ class AllWidgetsPage extends StatelessWidget {
           ),
         ));
   }
-
 }
